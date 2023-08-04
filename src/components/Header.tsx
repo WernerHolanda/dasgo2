@@ -30,12 +30,13 @@ export function Header(){
             py="4" //paddingvertical
             px="8"//padding horizontal
             ml="6"
-            maxWidth={400}
+            maxWidth={1000}
             alignSelf="center"//se alinhar ao centro
             color="gray.200"
             position="relative"
             bg="gray.800"
             borderRadius-="full"
+            
         >
         <Input
             color="gray.50"
@@ -57,6 +58,8 @@ export function Header(){
                 color="gray.300"
                 borderRightWidth={1}
                 borderColor="gray.700"
+                //border="2px"
+                //align="right"
             >
                 <Icon as={RiSearchLine} //isso é uma instrução do chakra lib
                     fontSize="20"
@@ -67,7 +70,7 @@ export function Header(){
                 /> 
             </HStack>
 
-            <Flex align="center">
+            <Flex >
                 <Box mr="4" textAlign="right">
                     <Text>Werner Holanda</Text>
                     <Text color="gray.300" fontSize="small">
