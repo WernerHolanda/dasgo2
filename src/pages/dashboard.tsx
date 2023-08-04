@@ -5,6 +5,12 @@ import { Sidebar } from "@/components/Sidebar";
 import Chart from 'react-apexcharts';
 
 
+const options = {};
+
+const series = [
+    { name: 'series1', data: [31,120,10,28,61, 18, 109]}
+]
+
 export default function Dashboard(){
     return(
         <Flex direction="column" h="100vh" > 
@@ -29,7 +35,7 @@ export default function Dashboard(){
                         >Iscritos da Semana
                         </Text>
 
-                            
+                        <Chart options={options} series={series} type="area" height={160} />
                     </Box>
 
                     <Box
