@@ -1,3 +1,4 @@
+import { Pagination } from "@/components/Pagination";
 import { Header } from "../../components/Header";
 import { Sidebar } from "@/components/Sidebar";
 import { Button, Heading, Icon, Flex, Box, Checkbox, Table, Th, Thead, Tr, Tbody, Td, Text } from "@chakra-ui/react";
@@ -112,6 +113,8 @@ export default function UserList() {
                             </Tr>
                         </Tbody>
                     </Table>
+
+                    <Pagination />
                 </Box>
             </Flex>
         </Box>
