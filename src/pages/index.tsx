@@ -30,4 +30,6 @@ export default function Home(){
         </Flex>
     )
 }
+
+//export const getServerSideProps
  
