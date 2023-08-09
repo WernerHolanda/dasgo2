@@ -4,9 +4,9 @@ import { RiSearchLine, RiUserAddLine } from "react-icons/ri";
 export function NotificationsNav () {
     return (
         <HStack
-        spacing="8"
-        mx="8"
-        pr="8" //poadding right
+        spacing={["6", "8"]} // o 6 é o tamanho que ficaŕa pa usuários mobile, enquanto o normal é 8
+        mx={["6", "8"]}
+        pr={["6", "8"]} //poadding right
         py="1" //padding vertical
         color="gray.300"
         borderRightWidth={1}
