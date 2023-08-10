@@ -2,6 +2,7 @@ import { Header } from "../../components/Header";
 import { Sidebar } from "@/components/Sidebar";
 import { Flex, Box, Divider, Heading, VStack, SimpleGrid, Button, HStack } from "@chakra-ui/react";
 import { Input } from '../../components/form/Input'
+import Link from "next/link";
 
 
 
@@ -34,7 +35,10 @@ export default function UserList() {
 
                     <Flex mt="8" justify="flex-end">
                         <HStack spacing="4">
-                            <Button colorScheme="whiteAlpha">Cancelar</Button>
+                            <Link href="/users/create" passHref>
+                                <Button as="a" //as ="a" significa q é reconhecer esse botão como uma ancora
+                                 colorScheme="whiteAlpha">Cancelar</Button>
+                            </Link>        
                             <Button colorScheme="pink">Salvar</Button>
                         </HStack>
                     </Flex>
