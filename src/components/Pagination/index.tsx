@@ -4,7 +4,7 @@ import { Box, Button, Stack } from "@chakra-ui/react";
 export function Pagination() {
     return (
     <Stack //por padrão o stack é vertical então por isso eu coloco o 'direction'
-    direction="row"
+    direction={["column", "row"]}
     spacing="6"
     mt="8"
     justify="space=between"

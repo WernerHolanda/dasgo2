@@ -75,7 +75,7 @@ export default function Dashboard(){
                     minChildWidth="320px"// qdo o grid ficar menor que 320px de largura ele vai quebrar e mandar p baixo
                 >
                     <Box
-                        p="8"
+                        p={["6", "8"]}
                         bg="gray.800"
                         borderRadius={8}
                         pb="4" //signf padding border
