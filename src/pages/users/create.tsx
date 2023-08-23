@@ -32,7 +32,7 @@ const createUserFormSchema = yup.object().shape({
 
 export default function CreateUser() {
     const { register, handleSubmit, formState, 
-        errors
+        //errors
     } = useForm({
         resolver: yupResolver(createUserFormSchema)
     })

@@ -27,5 +27,8 @@
     "react-icons": "^4.10.1",
     "typescript": "5.1.6",
     "yup": "^1.2.0"
+  },
+  "devDependencies": {
+    "miragejs": "^0.1.47"
   }
 }
