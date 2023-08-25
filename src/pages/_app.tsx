@@ -5,6 +5,12 @@ import { ChakraProvider } from '@chakra-ui/react' //o nome Provider signific q Ã
 import { theme } from '../styles/theme'
 
 import { SidebarDrawerProvider } from '@/components/contexts/SidebarDrawerContext'
+import { makeServer } from '../services/mirage'
+
+if (process.env.NODE_ENV === 'development'){
+    makeServer();
+}
+
 
 function MyApp ({ Component, pageProps }: AppProps) {
     return (
