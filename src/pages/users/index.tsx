@@ -1,17 +1,19 @@
 
-import { Button, Heading, Icon, Flex, Box, Checkbox, Table, Th, Thead, Tr, Tbody, Td, Text, useBreakpointValue, useBreakpoint, Spinner } from "@chakra-ui/react";
+import NextLink from "next/link";
+import { Box, Button, Checkbox, Flex, Heading, Icon, Link, Spinner, Table, Tbody, Td, Text, Th, Thead, Tr, useBreakpointValue, useBreakpoint } from "@chakra-ui/react";
 import { RiAddLine } from "react-icons/ri";
-import Link from "next/link";
-import { useQuery } from 'react-query'
 
 import { Header } from "../../components/Header";
 import { Pagination } from "@/components/Pagination";
 import { Sidebar } from "@/components/Sidebar";
-import { useEffect } from "react";
+import { useUsers } from "../../services/hooks/useUsers";
+import { useState } from "react";
+import { QueryClient, useQuery } from 'react-query'
 
 
 export default function UserList() { //data = os dados // isloading = se esta carregando // error= mostrar os erros
-    const { data, isLoading, error} = useQuery('users', async () => { //users é como eu irei chamar 
+    const [page, setPage] = useState(1);    
+    const { data, isLoading, error } = useQuery('users', async () => { //users é como eu irei chamar 
         const response = await fetch('https://localhost:3000/api/users')
         const data = await response.json()
     //*    
@@ -37,6 +39,10 @@ export default function UserList() { //data = os dados // isloading = se esta ca
         base: false,
         lg: true,
     })
+
+    const handlePrefetchUser(userId: number) {
+        await QueryClient
+    }
 
     return(
         <Box>
@@ -86,15 +92,15 @@ export default function UserList() { //data = os dados // isloading = se esta ca
                     </Thead>
 
                     <Tbody>
-                        {data.user.map(user => {
+                        {data.map(user => {
                             return (
-                                <Tr>
+                                <Tr key={user.id}>
                                     <Td px={["4", "4", "6"]} >
                                         <Checkbox colorScheme="pink" />
                                     </Td>
                                     <Td>
                                         <Box>
-                                            <Text></Text>
+                                            <Text color="purple.400" onMouseEnter= {() => handlePrefetchUser(user. id)}></Text>
                                             <Text fontWeight="bold">{user.name}</Text>
                                             <Text fontSize="sm" color="gray.300">{user.email}.com</Text>
                                         </Box>
@@ -106,7 +112,11 @@ export default function UserList() { //data = os dados // isloading = se esta ca
                     </Tbody>
                         </Table>
 
-                        <Pagination />
+                        <Pagination 
+                        totalCountOfRegisters={200}
+                        currentPage={5}
+                        onPageChange={ () => {}}
+                         />
                     </>
               )}      
                 </Box>
