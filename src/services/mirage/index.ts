@@ -30,7 +30,7 @@ export function makeServer(){
 
         seeds(server)
             {
-             server.createList('user', 200) //significa qtos usuários eu quero criar.'. 200.    
+             server.createList('user', 10) //significa qtos usuários eu quero criar.'. 200.    
             },
 
         routes() { // tudo dentro dessa pasta decorre da documentação do mirage
