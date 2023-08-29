@@ -7,8 +7,8 @@ import { theme } from '../styles/theme'
 
 import { QueryClientProvider } from 'react-query'
 import { SidebarDrawerProvider } from '@/components/contexts/SidebarDrawerContext'
-import { makeServer } from '../services/mirage'
-import { queryClient } from '@/services/mirage/queryClient'
+import { makeServer } from '../services/Mirage/index'
+import { queryClient } from '../services/Mirage/queryClient'
 
 if (process.env.NODE_ENV === 'development'){
     makeServer();

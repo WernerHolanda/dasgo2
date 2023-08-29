@@ -1,6 +1,5 @@
 
-import NextLink from "next/link";
-import { Box, Button, Checkbox, Flex, Heading, Icon, Link, Spinner, Table, Tbody, Td, Text, Th, Thead, Tr, useBreakpointValue, useBreakpoint } from "@chakra-ui/react";
+import { Box, Button, Checkbox, Flex, Heading, Icon, Link, Spinner, Table, Tbody, Td, Text, Th, Thead, Tr, useBreakpointValue } from "@chakra-ui/react";
 import { RiAddLine } from "react-icons/ri";
 
 import { Header } from "../../components/Header";
@@ -8,41 +7,16 @@ import { Pagination } from "@/components/Pagination";
 import { Sidebar } from "@/components/Sidebar";
 import { useUsers } from "../../services/hooks/useUsers";
 import { useState } from "react";
-import { QueryClient, useQuery } from 'react-query'
 
 
 export default function UserList() { //data = os dados // isloading = se esta carregando // error= mostrar os erros
     const [page, setPage] = useState(1);    
-    const { data, isLoading, error } = useQuery('users', async () => { //users é como eu irei chamar 
-        const response = await fetch('https://localhost:3000/api/users')
-        const data = await response.json()
-    //*    
-        const users = data.users.map(user => {
-            return{
-                id: user.id,
-                name: user.name,
-                email: user.email,
-                createdAt: new Date(user.createdAt).toLocaleDateString('pt-BR', {
-                    day: '2-digit',
-                    month: 'long',
-                    year: 'numeric'
-                 })
-            };
-        });
-
-        return users;
-    }, {
-        staleTime: 1000 * 5, //5 seconds
-    }) 
-
+    const { data, isLoading, error } = useUsers(page); //useQuery('users', async () => { //users é como eu irei chamar 
+        
     const isWideVersion = useBreakpointValue({
         base: false,
         lg: true,
     })
-
-    const handlePrefetchUser(userId: number) {
-        await QueryClient
-    }
 
     return(
         <Box>
@@ -92,7 +66,7 @@ export default function UserList() { //data = os dados // isloading = se esta ca
                     </Thead>
 
                     <Tbody>
-                        {data.map(user => {
+                        {data.users.map(user => {
                             return (
                                 <Tr key={user.id}>
                                     <Td px={["4", "4", "6"]} >
@@ -113,9 +87,9 @@ export default function UserList() { //data = os dados // isloading = se esta ca
                         </Table>
 
                         <Pagination 
-                        totalCountOfRegisters={200}
-                        currentPage={5}
-                        onPageChange={ () => {}}
+                        totalCountOfRegisters={data?.totalCount}
+                        currentPage={page}
+                        onPageChange={setPage}
                          />
                     </>
               )}      

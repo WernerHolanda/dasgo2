@@ -1,4 +1,4 @@
-import { Factory, Model, createServer } from 'miragejs'
+import { Factory, Model, createServer, Response } from 'miragejs'
 import { faker } from '@faker-js/faker';
 
 type User = {
@@ -37,7 +37,24 @@ export function makeServer(){
             this.namespace = 'api';
             this.timing = 750; //milisegundos
 
-            this.get('/users');
+            this.get('/users', function (schema, request) {
+                const { page = 1, per_page = 10 } = request.queryParams
+
+                const total = schema.all('user').length
+
+                const pageStart = (Number(page) - 1) * Number(per_page);
+                const pageEnd = pageStart + Number(per_page);
+                
+                const users = this.serialize(schema.all('user'))
+                    .users.slice(pageStart, pageEnd)
+
+                return new Response( // o Response recebe 3 parametros:
+                200, // signf status code = 200 = sucesso
+                { 'x-total-count': String(total)},  // signf headers = totalCount. total = total de usuários
+                { users } // signf os nossos registros. no caso é a listagem de usuários da págijna
+                )
+                
+            });
             this.post('/users'); //ideia aqui é para criar toda a estrutura de criação POST no Bdados do MIRAGE
         
             this.namespace = ''; //aqui siginifica q o namespace retornará para vazio para não conflitar com as rotas do nosso codigo

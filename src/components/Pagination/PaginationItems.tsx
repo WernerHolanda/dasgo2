@@ -3,11 +3,16 @@ import { Button } from "@chakra-ui/react";
 interface PaginationItemProps {
     number: number;
     isCurrent?: boolean;
+    onPageChange: (page: number) => void;
 }
 
 
-export function PaginationItem({number, isCurrent = false }: PaginationItemProps){//como o isCurrrent é opcional, devemos definir qual é o padrão do item da interface opcional. faz-se isso colocando =true or =false
-    if (isCurrent) {
+export function PaginationItem({
+    isCurrent = false,
+    onPageChange, 
+    number, 
+    }: PaginationItemProps){//como o isCurrrent é opcional, devemos definir qual é o padrão do item da interface opcional. faz-se isso colocando =true or =false
+        if (isCurrent) {
         return(
             <Button 
                 size="sm"
@@ -31,7 +36,9 @@ export function PaginationItem({number, isCurrent = false }: PaginationItemProps
                 bg="gray.700"
                 _hover={{
                     bg:'gray.500'
-                }}>
+                }}
+                onClick={() => onPageChange(number)}
+                >
                     {number}
             </Button>
             )
