@@ -1,12 +1,15 @@
 
 import { Box, Button, Checkbox, Flex, Heading, Icon, Link, Spinner, Table, Tbody, Td, Text, Th, Thead, Tr, useBreakpointValue } from "@chakra-ui/react";
+import NextLink from "next/link";
 import { RiAddLine } from "react-icons/ri";
 
 import { Header } from "../../components/Header";
-import { Pagination } from "@/components/Pagination";
+import { Pagination } from "../../components/Pagination";//   components/Pagination";
 import { Sidebar } from "@/components/Sidebar";
 import { useUsers } from "../../services/hooks/useUsers";
 import { useState } from "react";
+import { queryClient } from "../../services/queryClient"
+import { api } from "@/services/api";
 
 
 export default function UserList() { //data = os dados // isloading = se esta carregando // error= mostrar os erros
@@ -17,6 +20,18 @@ export default function UserList() { //data = os dados // isloading = se esta ca
         base: false,
         lg: true,
     })
+
+    async function handlePrefetchUser(userId: number) {
+            await queryClient.prefetchQuery(['user', userId // msm coisa do useQuery, o 1º param é do que/quem eu quero realizar o prefetch, no caso é user. P 2º 
+            ], async () => {
+                const response = await api.get(`users/${userId}`)
+
+                return response.data;
+            }, {
+                staleTime: 1000 * 60 * 10, // 10 minutes
+            })
+        }
+    
 
     return(
         <Box>
@@ -29,7 +44,7 @@ export default function UserList() { //data = os dados // isloading = se esta ca
                     <Flex mb="8 " justify="space-between" align="center">
                         <Heading size="lg" fontWeight="normal">Usuários</Heading>
                         
-                        <Link href="/users/create" passHref>
+                        <NextLink href="/users/create" passHref>
                             <Button 
                                 as="a" 
                                 size="sm" 
@@ -39,7 +54,7 @@ export default function UserList() { //data = os dados // isloading = se esta ca
                                 >
                                     Criar Novo
                             </Button>
-                        </Link>
+                        </NextLink>
                     </Flex>
 
               { isLoading ? (
@@ -74,8 +89,10 @@ export default function UserList() { //data = os dados // isloading = se esta ca
                                     </Td>
                                     <Td>
                                         <Box>
-                                            <Text color="purple.400" onMouseEnter= {() => handlePrefetchUser(user. id)}></Text>
-                                            <Text fontWeight="bold">{user.name}</Text>
+                                            <Link color="purple.400" onMouseEnter= {() => handlePrefetchUser(user. id)}>
+                                                <Text fontWeight="bold">{user.name}</Text>
+                                            </Link>
+                                            
                                             <Text fontSize="sm" color="gray.300">{user.email}.com</Text>
                                         </Box>
                                     </Td>
@@ -87,9 +104,9 @@ export default function UserList() { //data = os dados // isloading = se esta ca
                         </Table>
 
                         <Pagination 
-                        totalCountOfRegisters={data?.totalCount}
-                        currentPage={page}
-                        onPageChange={setPage}
+                            totalCountOfRegisters={data.totalCount}
+                            currentPage={page}
+                            onPageChange={setPage}
                          />
                     </>
               )}      

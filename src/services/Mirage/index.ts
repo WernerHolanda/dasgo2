@@ -55,6 +55,8 @@ export function makeServer(){
                 )
                 
             });
+            this.get('/users/:id');
+ // é um shorthand do mirage que faz/cria uma rota no mirage
             this.post('/users'); //ideia aqui é para criar toda a estrutura de criação POST no Bdados do MIRAGE
         
             this.namespace = ''; //aqui siginifica q o namespace retornará para vazio para não conflitar com as rotas do nosso codigo

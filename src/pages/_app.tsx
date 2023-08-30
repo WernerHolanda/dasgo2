@@ -5,10 +5,10 @@ import { ChakraProvider } from '@chakra-ui/react' //o nome Provider signific q Ã
 import { ReactQueryDevtools } from 'react-query/devtools'
 import { theme } from '../styles/theme'
 
-import { QueryClientProvider } from 'react-query'
+import { QueryClientProvider, QueryClient } from 'react-query'
 import { SidebarDrawerProvider } from '@/components/contexts/SidebarDrawerContext'
 import { makeServer } from '../services/Mirage/index'
-import { queryClient } from '../services/Mirage/queryClient'
+import { queryClient } from '../services/queryClient'
 
 if (process.env.NODE_ENV === 'development'){
     makeServer();
