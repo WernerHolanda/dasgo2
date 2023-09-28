@@ -24,7 +24,7 @@ Programa exclusivo desenvolvido por Werner Holanda, promovido tomando por base o
 - Página para Logging e Acesso do usuário aos recursos do site, por meio de email e senha;
 
 <p align="center">
-  <img alt="Loggin/Acess" src="gif-LOGGIN ACCOUNT - Trim" height="350em">
+  <img alt="Loggin/Acess" src="gif-LOGGIN ACCOUNT - Trim.gif" height="350em">
 </p>
 
 - Página Dashboard :
@@ -33,14 +33,14 @@ Programa exclusivo desenvolvido por Werner Holanda, promovido tomando por base o
   - Barra superior de pesquisa por palavras-chave na plataforma;
 
 <p align="center">
-  <img alt="Dashboard main " src="gif-DASHBOARD AND USERS - Trim" height="350em">
+  <img alt="Dashboard main " src="gif-DASHBOARD AND USERS - Trim.gif" height="350em">
 </p>
 
 - Página Users :
   - contém lista de usuários inscritos na plataforma, além de botão que possibilita adicionar novos usuários;
 
 <p align="center">
-  <img alt="Create New User" src="gif-CREATE NEW USER - Trim" height="350em">
+  <img alt="Create New User" src="gif-CREATE NEW USER - Trim.gif" height="350em">
 </p>
     
 </h3>
