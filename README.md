@@ -20,27 +20,30 @@ Programa exclusivo desenvolvido por Werner Holanda, promovido tomando por base o
 
 <br>
 
-<h3>🔖 Abaixo, apresento a página/projeto contendo:
-- Página para Logging e Acesso do usuário aos recursos do site, por meio de email e senha;
+<h3>🔖 Abaixo, apresento a página/projeto contendo:</h3>
 
+  <p>- Página para Logging e Acesso do usuário aos recursos do site, por meio de email e senha;</p>
+
+  <br>
 <p align="center">
-  <img alt="Loggin/Acess" src="gif-LOGGIN ACCOUNT - Trim" height="350em">
+  <img alt="Loggin/Acess" src="gif-LOGGIN ACCOUNT - Trim.gif" height="350em">
 </p>
+<br>
 
-- Página Dashboard :
+<h3>
+🔖 - Página Dashboard :
   - contendo resumos por meio de gráficos dinâmicos ao longo do tempo "Inscritos da Semana" e "Taxa de Abertura";
   - Painel lateral com links reativos de acesso as demais páginas do site;
-  - Barra superior de pesquisa por palavras-chave na plataforma;
-
+  - Barra superior de pesquisa por palavras-chave na plataforma;</h3>
 <p align="center">
-  <img alt="Dashboard main " src="gif-DASHBOARD AND USERS - Trim" height="350em">
+  <img alt="Dashboard main " src="gif-DASHBOARD AND USERS - Trim.gif" height="350em">
 </p>
-
-- Página Users :
+<br>
+ 🔖 - Página Users :
   - contém lista de usuários inscritos na plataforma, além de botão que possibilita adicionar novos usuários;
 
 <p align="center">
-  <img alt="Create New User" src="gif-CREATE NEW USER - Trim" height="350em">
+  <img alt="Create New User" src="gif-CREATE NEW USER - Trim.gif" height="350em">
 </p>
     
 </h3>
