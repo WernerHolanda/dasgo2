@@ -48,8 +48,6 @@ Programa exclusivo desenvolvido por Werner Holanda, promovido tomando por base o
     
 </h3>
 
-<h3>🔖 Abaixo, demonstração da feature de xxxxx, atualizando os valores de resumo ao topo e na lista de transações:</h3>
-
 <p align="center">
   <img alt="Transactions Money" src="income - DW MONEY - Pessoal — Microsoft_ Edge 2023-09-25 10-51-03 - Trim.gif" height="350em">
 </p>
@@ -67,15 +65,12 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - Figma
 - Typescript
 - ReactJS
-- Next.Js
+- Next.Js 
+- chakra.ui {Interface declarativa}
 
 ## 💻 Projeto
 
-A página desenvolvida é um agregador de transações e seu resumo ao topo e construído com um layout amigável ao usuário, se adequando às necessidades de um sistema de transações de fácil acesso.
-Pode citar sua utilização como por exemplo: um site bancário, ou Administradora de Cartões de Crédito, Investimentos, ou mesmo sua adatapção para uma Lista/Carrinho de Itens para negócios de Compras Online.
-
-
-
+A página desenvolvida é uma plataforma que possui paineis resumo com gráficos reativos que refletem as informações resumidas e consumidas da própria plataforma. Nesse projeto, é possível avaliar e editar listagem dos vários usuários cadastrados em um banco de dados estáticos (apenas com fins ilustrativos);
 
 ## 🔖 Layout
 
