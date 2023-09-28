@@ -1,34 +1,85 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# dashboard.go:
 
-## Getting Started
+<h1 align="center"> Project Name: Werner Dashboard Go </h1>
 
-First, run the development server:
+<p align="center">
+Programa exclusivo desenvolvido por Werner Holanda, promovido tomando por base o projeto fornecido pela Rocketseat para ensino de tecnologias WEB - No BootCamp "Ignite - React.JS". <br/>
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+</p>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+<p align="center">
+  <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#memo-licença">Licença</a>
+</p>
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+<p align="center">
+  <img alt="License" src="https://img.shields.io/static/v1?label=license&message=MIT&color=49AA26&labelColor=000000">
+</p>
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+<br>
 
-## Learn More
+<h3>🔖 Abaixo, apresento a página/projeto contendo:
+- Página para Logging e Acesso do usuário aos recursos do site, por meio de email e senha;
 
-To learn more about Next.js, take a look at the following resources:
+<p align="center">
+  <img alt="Loggin/Acess" src="gif-LOGGIN ACCOUNT - Trim" height="350em">
+</p>
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Página Dashboard :
+  - contendo resumos por meio de gráficos dinâmicos ao longo do tempo "Inscritos da Semana" e "Taxa de Abertura";
+  - Painel lateral com links reativos de acesso as demais páginas do site;
+  - Barra superior de pesquisa por palavras-chave na plataforma;
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+<p align="center">
+  <img alt="Dashboard main " src="gif-DASHBOARD AND USERS - Trim" height="350em">
+</p>
 
-## Deploy on Vercel
+- Página Users :
+  - contém lista de usuários inscritos na plataforma, além de botão que possibilita adicionar novos usuários;
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+<p align="center">
+  <img alt="Create New User" src="gif-CREATE NEW USER - Trim" height="350em">
+</p>
+    
+</h3>
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+<h3>🔖 Abaixo, demonstração da feature de xxxxx, atualizando os valores de resumo ao topo e na lista de transações:</h3>
+
+<p align="center">
+  <img alt="Transactions Money" src="income - DW MONEY - Pessoal — Microsoft_ Edge 2023-09-25 10-51-03 - Trim.gif" height="350em">
+</p>
+
+<br>
+<br>
+
+## 🚀 Tecnologias
+
+Esse projeto foi desenvolvido com as seguintes tecnologias:
+
+- HTML e CSS
+- JavaScript
+- Git e Github
+- Figma
+- Typescript
+- ReactJS
+- Next.Js
+
+## 💻 Projeto
+
+A página desenvolvida é um agregador de transações e seu resumo ao topo e construído com um layout amigável ao usuário, se adequando às necessidades de um sistema de transações de fácil acesso.
+Pode citar sua utilização como por exemplo: um site bancário, ou Administradora de Cartões de Crédito, Investimentos, ou mesmo sua adatapção para uma Lista/Carrinho de Itens para negócios de Compras Online.
+
+
+
+
+## 🔖 Layout
+
+Você pode visualizar o layout do projeto através [DESSE LINK](https://www.figma.com/community/file/1187422022288947321). É necessário ter conta no [Figma](https://figma.com) para acessá-lo.
+
+## :memo: Licença
+
+Esse projeto está sob a licença MIT.
+
+---
